@@ -7829,6 +7829,11 @@ follow-redirects@^1.14.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
 
+fontsource-spartan@^3.0.3:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/fontsource-spartan/-/fontsource-spartan-3.1.6.tgz#ea4fae21afd2e98e9be719b94e22ae66f184f579"
+  integrity sha512-1R2q9DUh9smyP13BN/48bXJIJRrAQSx+vwOe0pMwtf8+hr/FbuXZYhg++atmTOoa8qEWISzHsvLou7sDj54ZQg==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
