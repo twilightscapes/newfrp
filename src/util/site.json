@@ -2,8 +2,8 @@
   "meta": {
     "iconimage": "/assets/frpinc-logo.webp",
     "font1": "Spartan",
-    "favicon32x32": "/assets/logo.svg",
-    "favicon16x16": "/assets/logo.svg",
+    "favicon32x32": "/assets/logo.png",
+    "favicon16x16": "/assets/logo.png",
     "showNav": true,
     "companyname": "FRP",
     "siteUrl": "https://memegenes.com",
@@ -16,7 +16,7 @@
     "showNav2": false,
     "postcount": "1",
     "showPopup": false,
-    "icon192": "/assets/logo.svg",
+    "icon192": "/assets/logo.png",
     "menu1": "About",
     "titleTemplate": "%s",
     "menu2": "Featured",
@@ -30,7 +30,7 @@
     "showCover": true,
     "image": "",
     "description": "FRP Structural Engineering",
-    "icon512": "/assets/icon.svg",
+    "icon512": "/assets/logo.png",
     "showSkills": false
   },
   "ga": "UA-89654528-2",
