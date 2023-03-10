@@ -1,26 +1,22 @@
 ---
 slug: /
-tagline:  Memes are life
-featuredImage: /assets/trump-epstein-promo.webp
+tagline:  FRP Structural Engineering
+featuredImage: /assets/experience-map.webp
 youtuber: 
 youtuber2: 
 audiostart: "20"
 audioend: "5000"
 audiotitle: "Lamb - Gorecki"
-underlayImage: /assets/transparent.png
+underlayImage: /assets/experience-map.webp
 profText: 
- <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
-  <p>Please enjoy(and share) the memes! <br /><br />Stay tuned for really big news about the platform that we're building and that we'll soon be offering to everyone. </p>
+ <div class="" style="text-align:left;"></p>
 addressText: ""
 portfolio:
-  openText: "Thank you for visiting, please swipe to view my portfolio"
-  closeText: Experience has taught me that good design is not created on a spur of
-    the moment, nor does it come naturally. Good design is a thorough and
-    interative process with site visitors in mind foremost. Good design is
-    identifying a problem for those visitors and removing that problem.
+  openText: ""
+  closeText: ""
 youtubeautostart: true
 addressText2: ""
-skillsTitle: "Mad Skills Yo!"
+skillsTitle: ""
 skillsText: 
   <dl>
   <dt>
@@ -44,11 +40,11 @@ skillsText:
   <dd class="percentage percentage-99"><span class="text">Hacking</span> <span class="percent">99%</span></dd>
   </dl>
 cta:
-  ctaText: Contact Gene
+  ctaText: Contact FRP
   ctaLink: ""
 svgImage: 
 secondaryImage: /assets/default-user.webp
-title: Do these memes make my butt look fat?
+title: FRP Structural Engineering
 youtubeend: "60"
 sharethis: false
 youtubeloop: true
@@ -71,9 +67,9 @@ template: index-page
 youtubemute: true
 description: A rogue one, out there to change the world, one meme at a time. 
 svgzindex: ""
-profTitle: MG Reports
+profTitle: FRP Engineering
 coverletter:
-  coverText: About Meme Genes
+  coverText: About FRP
   coverLink: /about
 youtubestart: "18"
 scrollable: true

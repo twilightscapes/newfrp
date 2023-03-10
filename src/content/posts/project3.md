@@ -1,50 +1,49 @@
 ---
 template: blog-post
-title: They proclaimed "help me, I need water". I said "What you need is Trump Water"!
-slug: /trump-water
-date: 2023-02-22 03:00
-description: Watch Trump make an ass of himself in Ohio, mocks the crowd about their water problems.
-youtuber: "https://youtu.be/s-s7eG2ckN4"
+title: Ball State university Alumni Center Muncie, IN
+slug: /project3
+date: 2023-02-11 03:00
+description: Exclusive! Trailer of YellowStone season 5 Part Two is here! There's more drama and action than any season before.
+youtuber: 
 youtuber2: 
-youtubeshoworiginal: true
+youtubeshoworiginal: false
 youtubersuggestion1: 
 youtubersuggestion2: 
 youtubersuggestion3: 
-youtubestart: "12"
-youtubeend: ""
+youtubestart: "0"
+youtubeend: "97"
 youtubemute: false
 audiostart: "20"
 audioend: "5000"
 audiotitle: 
-bumpertext: "Trump Water - the only thing Trump can make wet"
-liarliar: true
+bumpertext: ""
+liarliar: false
 youtubecontrols: false
 clicktoplay: false
-customcontrols: true
+customcontrols: false
 youtubeautostart: false
 youtubeloop: true
 isnftforsale: false
 svgzindex: "0"
-comments: true
-shareable: true
-underlayImage: /assets/trump-water-bg.webp
-featuredImage: /assets/trump-water-promo.webp
+comments: false
+shareable: false
+underlayImage: /assets/transparent.png
+featuredImage: /assets/hem_bsu_alumni_01-min.webp
 svgImage: 
 scrollable: true
 nftdrop: "2023-02-11T10:00:00"
 contentinvideo: false
-viewerwarning: Warning this content is rated total bullshit
-marate: BS
-marating1: VG
-marating2: 
-marating3: DQ
-marating4: ME
-maratingtx1: Vile Grifter
-maratingtx2: 
-maratingtx3: Drama Queen
-maratingtx4: It's all about me
-category: memes
-tags: [trump, water, worst]
+mararte: ""
+marating1: ""
+marating2: ""
+marating3: ""
+marating4: ""
+maratingtx1: ""
+maratingtx2: ""
+maratingtx3: ""
+maratingtx4: ""
+category: project
+tags: []
 ---
 <!-- <div class="contentinside lake1" style=""> -->
 <!-- <img class="" src="/assets/lakemouth.webp" width="100%" style=" z-index:-1; opacity:0;
@@ -72,21 +71,12 @@ opacity:0;
 "><span style="font-weight:bold;"></span></div>
 </div> -->
 
-<style>
 
-
-
-</style>
 <div class="contentbody" style="text-align:left !important; margin-top:0;">
 
-## Trump visiting Ohio is like a killer visiting the crime scene afterwards. 
 
-The mango tinged fool has done what he does best, and that is to show up, make everything about him and then whine about how he has been so misreated. 
-
-It's an exhaustingly tired routine, but if he's not on TV doing his infamous "Stroker Ace" dance moves to YMCA then he would wither away and die.
-
-
-
-
+This attractive project consists of a four level, 590 car parking garage and three stair/elevator towers and is located on the Ball State University campus. The fascia for the parking garage consists of brick, stone and exposed concrete. The fascia for the stair towers consists of brick and window wall.
+<br /><br />
+A cast-in-place concrete, post-tensioned frame was selected due to its superior durability, better security as a result of better light dispersion, and enhanced driver comfort. Microsilica concrete was used for all post-tensioned concrete parking levels to increase durability.
 
 </div>

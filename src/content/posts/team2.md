@@ -1,54 +1,49 @@
 ---
 template: blog-post
-title: Sometimes, I doubt your commitment to SparkleMotion!
-slug: /sparklemotion
-date: 2023-02-18 04:43
-description: Tears, hysterics, manipulation and insanity! I often wonder how she makes it through each day
-youtuber: "https://youtu.be/accEKtBebaU"
-youtuber2: 
-youtubeshoworiginal: true
-youtubersuggestion1: 
-youtubersuggestion2: 
-youtubersuggestion3: 
-youtubestart: "1"
-youtubeend: "5"
+title: MELISSA STUMP, PE
+slug: /team2
+date: 2023-02-11 03:00
+description: Exclusive! Trailer of YellowStone season 5 Part Two is here! There's more drama and action than any season before.
+youtuber: ""
+youtuber2: ""
+youtubeshoworiginal: false
+youtubersuggestion1: ""
+youtubersuggestion2: ""
+youtubersuggestion3: ""
+youtubestart: "0"
+youtubeend: "97"
 youtubemute: false
 audiostart: "20"
 audioend: "5000"
 audiotitle: 
-liarliar: true
+bumpertext: ""
+liarliar: false
 youtubecontrols: false
 clicktoplay: false
-customcontrols: true
+customcontrols: false
 youtubeautostart: false
 youtubeloop: true
 isnftforsale: false
 svgzindex: "0"
-comments: true
-shareable: true
-underlayImage: /assets/sparklemotion.webp
-featuredImage: /assets/sparklemotion-promo.webp
-svgImage: 
+comments: false
+shareable: false
+underlayImage: /assets/transparent.png
+featuredImage: /assets/team_melissa_stump.webp
+svgImage: /assets/null.svg
 scrollable: true
-nftdrop: "2023-02-11T10:00:00"
-contentinvideo: true
-bumpertext: "Sometimes, I doubt your commitment to SparkleMotion!"
-marating1: YB
-marating2: SS
-marating3: LH
-marating4: AL
-maratingtx1: Use your brain please
-maratingtx2: Spontaneous & Sporadic
-maratingtx3: It's Humor - laugh
-maratingtx4: Adult Language
-category: memes
-tags: [humor, darko]
+nftdrop: 2023-02-11T10:00:00
+contentinvideo: false
+marating1: 
+marating2: 
+marating3: 
+marating4: 
+maratingtx1: 
+maratingtx2: 
+maratingtx3: 
+maratingtx4: 
+category: team
+tags: [educational]
 ---
-
-
-<!-- https://youtu.be/8EPEkk6qWkg IVANKA/TRUMP -->
-
-
 <!-- <div class="contentinside lake1" style=""> -->
 <!-- <img class="" src="/assets/lakemouth.webp" width="100%" style=" z-index:-1; opacity:0;
 animation: kariFilter 6s ease-in-out;
@@ -75,20 +70,9 @@ opacity:0;
 "><span style="font-weight:bold;"></span></div>
 </div> -->
 
-<style>
-
-
-
-
-</style>
-
-
 
 <div class="contentbody" style="text-align:left !important; margin-top:0;">
 
-## Sometimes, I doubt your commitment to SparkleMotion!
-
-
-
-
 </div>
+
+Melissa serves as a Vice President at FRP, and has 26 years of experience. She completed her undergraduate studies at Purdue University. Her experience has included work in educational facilities (K-12 and university projects), parking garages, athletic facilities, hotels, office buildings, and airport concourses. Melissa has been involved in the structural design and analysis of reinforced concrete, post-tensioned concrete and steel structures, as well as the investigation of existing structures subjected to additional loads.

@@ -38,7 +38,6 @@ import Layout from "../components/siteLayout"
 
 export const pageQuery = graphql`
 query HomeQuery($id: String!) {
-
   site {
     siteMetadata {
       title
@@ -62,8 +61,6 @@ query HomeQuery($id: String!) {
       showSkills
     }
   }
-
-
   markdownRemark(id: {eq: $id}) {
     id
     html
@@ -144,12 +141,9 @@ query HomeQuery($id: String!) {
       }
     }
   }
-
-
-
   posts: allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {template: {eq: "blog-post"}}}
+    filter: {frontmatter: {template: {eq: "blog-post"}, category: {eq: "news"}}}
     limit: 30
   ) {
     edges {
@@ -179,7 +173,8 @@ query HomeQuery($id: String!) {
     }
   }
 }
-`
+`;
+
 
 
 
@@ -819,7 +814,12 @@ Click to play
 
 {showPosts ? (
   <section id="showPosts" style={{marginTop:'1vh'}}>
+      <StaticImage src="../../static/assets/space-truss-image.webp" alt="Default Image" style={{height:'100vh', width:'100vw', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'-1vh',border:'0px solid !important', objectFit:'contain', opacity:'.5'}} />
   <div style={{position:'relative', background:'none', maxHeight:'', overflow:'', width:'100vw'}}>
+
+
+
+
 <ScrollAnimation className="animate" animateIn="bounceInDown" animateOut="" initiallyVisible={true} animateOnce={false} animatePreScroll={false} > 
 <div className="horizontal-scroll panels sitegrad movingBG" style={{marginTop:'1vh'}}>
     <div className="" style={{height:'50%', paddingTop:'50%'}}></div>
@@ -928,7 +928,8 @@ Click to play
 
 
 
-<section className="vertical" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', padding:'0 0 0 0', border:'0px solid blue',background:'rgba(0,0,0,0.3)',}}>
+
+<section className="vertical" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', padding:'0 0 0 0', border:'0px solid blue',}}>
 
 
 
@@ -955,6 +956,7 @@ Click to play
 
          
   
+
 
 
 <Link state={{modal: true}} to="/contact" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center' }}>{frontmatter.cta.ctaText}</Link>
@@ -994,7 +996,7 @@ Click to play
 
 
 
-{SecondaryImage ? (
+{/* {SecondaryImage ? (
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
@@ -1003,10 +1005,10 @@ Click to play
             />
           ) : (
             ""
-          )}
+          )} */}
 
 
-
+<div className="services-container"><div className="services-wrapper"><div className="services-text text1">Structural Design</div><div className="square square1"></div><div className="square square2"></div><div className="square square3"></div><div className="square square4"></div><div className="square square5"></div><div className="rectangle"></div><div className="services-text text2">Investigations</div><div className="services-text text3">Restorations</div><div className="services-text text4">Seismic Assessment</div></div></div>
 
 
   <div className="nameblock panel" style={{margin:'0 auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center',
@@ -1020,9 +1022,7 @@ Click to play
   textShadow:'0 2px 7px #000',
   }} >
 
-<span style={{marginTop:'10px', fontSize:'160%'}}>
-  {/* {companyname}  */}
-  Meme Gene</span>
+
 
 </div>
 </div> 
@@ -1039,18 +1039,47 @@ Click to play
   {frontmatter.tagline}
 </h2> */}
 
-<div
+{/* <div
 style={{fontSize:'clamp(1.2rem, 1.3vw, 2.2rem)'}}
   className="description"
   dangerouslySetInnerHTML={{ __html: ProfText }}
-/>
+/> */}
+
+<div className="description" style={{fontSize:'clamp(1.2rem, 1.3vw, 2.2rem)', padding:'2vh 1vw'}}>
+ESTABLISHED IN 1944 WITH 79 YEARS OF EXPERIENCE, FRP HAS A BROAD PORTFOLIO OF PROJECT TYPES ACROSS A WIDE GEOGRAPHIC REGION
+</div>
+
 </div>
 
 
 
+
 </div> 
+
+
+
+
 </article>
+
+
+{UnderlayImage ? (
+              <GatsbyImage
+                image={UnderlayImage}
+                alt={frontmatter.title + " - image"}
+                className="mcboaty11"
+                style={{height:'100%', width:'100%', maxWidth:'100vw', maxHeight:'', overflow:'', position:'asbsolute', zIndex:'0', margin:'10vh auto',
+               objectFit:'cover', border:'0px solid red !important', background:'transparent',}}
+              />
+              
+            ) : (
+              ""
+            )}
+
 </section>
+
+
+
+
 </ScrollAnimation>
 ) : (
   ""

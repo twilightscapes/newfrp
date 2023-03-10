@@ -114,16 +114,13 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 {showNav ? (
 
-<ul sx={navStyle} id="menu" className="menu print panel" style={{position:'fixed', width:'100vw', top:'0', zIndex:'10', display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'10px', textAlign:'center',  color:'', boxShadow:'0 0 24px rgba(0,0,0,.9)', padding:'0 .5rem', alignItems:'center', borderRadius:'0', minHeight:'70px' }}>
+<ul sx={navStyle} id="menu" className="menu print panel" style={{}}>
       
-
-
-
 {prefersReducedMotion ? (
             <li className="nomo" style={{position:'relative',}}>
             <button className="">
             {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'60px', border:'none'}} width="100" height="70" />
+      <img className="" src={iconimage} alt={companyname} style={{minWidth:'200px', border:'none'}} width="150" height="70" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
@@ -131,9 +128,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
           </li>
           ) : (
             <li className="momo" style={{position:'relative',}}>
-                        <AnchorLink to="/#top" name="homereturn" style={{position:'', display:'block', maxWidth:'150px', height:'60px', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
+                        <AnchorLink to="/#top" name="homereturn" style={{position:'', display:'block', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'60px', border:'none'}} width="100" height="70" />
+      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'',minWidth:'200px', border:'none', padding:'1.2vh 2vw'}} width="150" height="70" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
@@ -224,21 +221,67 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 )}
 
 
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="News" className="navbar-item" to="/" style={{paddingRight:'',}}>
+      News</AnchorLink>         
+
+</li>
+
+
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/projects" style={{paddingRight:'',}}>
+      Projects</AnchorLink>         
+
+</li>
+
+
 
 {showInfo ? (
 <li style={{position:'relative',}}>
-      {prefersReducedMotion ? (
+      {/* {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
    ) : (
       <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
       {menu1}</AnchorLink>         
-    )}
+    )} */}
+<AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
+      About</AnchorLink>   
+
 </li>
       ) : (
   ""
 )}
 
 
+
+
+
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/team" style={{paddingRight:'',}}>
+      Team</AnchorLink>         
+
+</li>
+
+
+
+
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
+      Careers</AnchorLink>         
+
+</li>
+
+
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/contact" style={{paddingRight:'',}}>
+      Contact</AnchorLink>         
+
+</li>
 
 
 
@@ -281,7 +324,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   </li> */}
 
 
-<li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
+<li className="carto crypto nomo search" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
    <Link aria-label="Search MemeGenes" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'0px'}}>
     <SearchIcon style={{width:'3vh', height:'3vw'}} />
    </Link>
@@ -289,7 +332,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-  <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important', alignItems:'center', }}>
+  <li className="carto crypto nomo theme" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important', alignItems:'center', }}>
       <Theme  style={{color:'red !important'}} />
 
         </li>
@@ -531,7 +574,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 {children}
 </div>
       
-<img className="backimage" src={image} alt="Default Background" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" />
+<img className="backimage" src={image} alt="" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" />
       
       {/* <Consent /> */}
      {/* <Install /> */}
