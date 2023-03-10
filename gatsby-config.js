@@ -321,10 +321,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `MemeGenes`,
-        short_name: `MemeGenes`,
+        name: `FRP`,
+        short_name: `FRP`,
         start_url: `/?user_mode=app`,
-        description: `MemeGenes`,
+        description: `FRP`,
         background_color: `#111`,
         lang: `en`,
         theme_color: `#111`,
