@@ -46,7 +46,7 @@ const SearchPage = ({ data }) => {
         <input id="clearme" type="text" placeholder="filter by keyword" onChange={handleSearch} style={{maxWidth:'80vw'}} /> 
 <button type="reset" value="reset" onClick={() => clearfield()} style={{position:'absolute', right:'2.5vw', top:'1.5vh', color:'#fff'}}>clear</button>
 
-              <div style={{position:'absolute', right:'80px', top:'10px', textAlign:'center', fontSize:'10px'}}>{filteredPosts.length} <br />result{filteredPosts.length !== 1 && 's'}</div>
+              <div style={{position:'absolute', right:'80px', top:'10px', textAlign:'center', fontSize:'10px', color:'#fff'}}>{filteredPosts.length} <br />result{filteredPosts.length !== 1 && 's'}</div>
       </label>
               
 
