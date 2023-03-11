@@ -325,7 +325,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 <li className="carto crypto nomo search" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
-   <Link aria-label="Search MemeGenes" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'0px'}}>
+   <Link aria-label="Search" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'0px'}}>
     <SearchIcon style={{width:'3vh', height:'3vw'}} />
    </Link>
         </li>
@@ -502,7 +502,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
       
 
-   <Link aria-label="Search MemeGenes" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
+   <Link aria-label="Search" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
     <SearchIcon />
    </Link>
     

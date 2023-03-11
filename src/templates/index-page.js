@@ -1175,7 +1175,7 @@ ESTABLISHED IN 1944 WITH 79 YEARS OF EXPERIENCE, FRP HAS A BROAD PORTFOLIO OF PR
 
  {/* <GoogleMap /> */}
 <div id="bottom" className="usability" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
-<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://memegenes.com" target="_blank" rel="noreferrer">MemeGenes.com</a></div>
+<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://frpinc.com" target="_blank" rel="noreferrer">FRP</a></div>
 </div>
 <br/><br/><br/>
 
