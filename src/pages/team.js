@@ -17,17 +17,18 @@ const TeamPage = ({ data }) => {
 
 
   const resizeGrid = () => {
-    const elements = document.querySelectorAll('.grid-container');
+    const elements = document.querySelectorAll('.contentpanel');
     elements.forEach(el => {
       el.classList.remove('horizontal-scroll', 'panels');
+      el.classList.add('grid-container');
     });
   }
   
   const resizeSwipe = () => {
-    const elements = document.querySelectorAll('.grid-container');
+    const elements = document.querySelectorAll('.contentpanel');
     elements.forEach(el => {
-
-        el.classList.add('horizontal-scroll', 'panels');
+      el.classList.remove('grid-container');
+      el.classList.add('horizontal-scroll', 'panels');
 
     });
   }
@@ -82,7 +83,7 @@ const TeamPage = ({ data }) => {
 </div>
 </ScrollAnimation>
 
-        <div className="grid-container" style={{padding:''}}>
+        <div className="contentpanel grid-container" style={{padding:''}}>
           
         <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
           {posts.map(({ node }) => (
