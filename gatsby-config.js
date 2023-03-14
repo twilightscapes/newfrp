@@ -257,7 +257,7 @@ module.exports = {
     //     htmlTitle: `Meme Genes CMS`,
     //     htmlFavicon: `static/siteimages/manifest-icon-192.png`,
     //     includeRobots: false,
-    //     logo_url: 'https://memegenes.com/assets/logo.svg'
+    //     logo_url: 'https://yoursite.com/assets/logo.svg'
     //   },
     // },
 
@@ -305,8 +305,8 @@ module.exports = {
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
-    //     host: 'https://memegenes.com',
-    //     sitemap: 'https://memegenes.com/sitemap.xml',
+    //     host: 'https://yoursite.com',
+    //     sitemap: 'https://yoursite.com/sitemap.xml',
     //     resolveEnv: () => process.env.GATSBY_ENV,
     //     env: {
     //       development: {

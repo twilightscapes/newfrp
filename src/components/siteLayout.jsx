@@ -574,7 +574,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 {children}
 </div>
       
-<img className="backimage" src={image} alt="" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" />
+{/* <img className="backimage" src={image} alt="" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" /> */}
       
       {/* <Consent /> */}
      {/* <Install /> */}

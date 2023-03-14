@@ -126,7 +126,7 @@ Play Multimedia
 }
 
 export const pageQuery = graphql`
-query pageUsersSitesmemegenessrcpagessearchindexJs3773404046 {
+query pageUsersSitesssrcpagessearchindexJs3773404046 {
   allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
     filter: {frontmatter: {template: {eq: "blog-post"}}}
