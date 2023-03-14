@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: What is Structural Engineering?
+title: Lucas Oil Stadium
 slug: /news3
 date: 2023-02-11 03:00
 description: Exclusive! Trailer of YellowStone season 5 Part Two is here! There's more drama and action than any season before.
@@ -27,7 +27,7 @@ isnftforsale: false
 svgzindex: "0"
 comments: false
 shareable: false
-underlayImage: /assets/transparent.png
+underlayImage: 
 featuredImage: /assets/Slider3.webp
 svgImage: 
 scrollable: true
