@@ -355,7 +355,7 @@ to{opacity:0;z-index:-3}
 #menu li a{display: block; height:100%; border:1px solid transparent;}
 
 #menu li:hover{
-    outline:1px solid red;
+    // outline:1px solid red;
     display: block;
     padding: 1vh 2vw;
 }
@@ -435,6 +435,10 @@ ul li{display:inline-block}
 .pagemenu{background:rgba(0,0,0,.5);transition:all .3s ease-in-out}
 .pagemenu svg:hover,.pagemenu:hover{color:#fff;fill:#fff}
 .pagemenu,.pagemenu svg{color:#ddd;fill:#ddd}
+
+
+.sliderSpacer{display:none;}
+.horizontal-scroll .sliderSpacer{display:block !important; height:50%; padding-top:50%; }
 
 
 @media(max-width:48rem) {

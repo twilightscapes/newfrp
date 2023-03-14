@@ -324,22 +324,22 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   </li> */}
 
 
-<li className="carto crypto nomo search" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
+<li className="carto crypto nomo search" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}>
    <Link aria-label="Search" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'0px'}}>
     <SearchIcon style={{width:'3vh', height:'3vw'}} />
    </Link>
         </li>
 
+<li style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}></li>
 
-
-  <li className="carto crypto nomo theme" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important', alignItems:'center', }}>
-      <Theme  style={{color:'red !important'}} />
+  <li className="carto crypto nomo theme" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'', alignItems:'center', }}>
+      <Theme  style={{color:''}} />
 
         </li>
 
  
 
-    <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'center', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
+    <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'center', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}>
    <Link aria-label="Enter Full Screen Mode" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'', cursor:'pointer'}}>
    <Fullscreen />
    </Link>
