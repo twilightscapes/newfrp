@@ -19,7 +19,7 @@ const TeamPage = ({ data }) => {
   const resizeGrid = () => {
     const elements = document.querySelectorAll('.grid-container');
     elements.forEach(el => {
-      el.classList.remove('horizontal-scroll');
+      el.classList.remove('horizontal-scroll', 'panels');
     });
   }
   
@@ -27,27 +27,27 @@ const TeamPage = ({ data }) => {
     const elements = document.querySelectorAll('.grid-container');
     elements.forEach(el => {
 
-        el.classList.add('horizontal-scroll');
+        el.classList.add('horizontal-scroll', 'panels');
 
     });
   }
   
-  // call the appropriate function on page load and resize
-  window.addEventListener('load', () => {
-    if (window.innerWidth >= 768) {
-      resizeSwipe();
-    } else {
-      resizeGrid();
-    }
-  });
+  // // call the appropriate function on page load and resize
+  // window.addEventListener('load', () => {
+  //   if (window.innerWidth >= 768) {
+  //     resizeSwipe();
+  //   } else {
+  //     resizeGrid();
+  //   }
+  // });
   
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
-      resizeSwipe();
-    } else {
-      resizeGrid();
-    }
-  });
+  // window.addEventListener('resize', () => {
+  //   if (window.innerWidth >= 768) {
+  //     resizeSwipe();
+  //   } else {
+  //     resizeGrid();
+  //   }
+  // });
   
 
 
@@ -73,7 +73,7 @@ const TeamPage = ({ data }) => {
         )}
       <div>
 
-      <ScrollAnimation animateIn="" animateOut="" initiallyVisible={true} animateOnce={false} animatePreScroll={true} style={{position:'absolute', left:'0', top:'20vh', zIndex:'1', width:'', background:'rgba(0, 0, 0, .6)', color:'#ccc', height:'', borderRadius:'0 12px 12px 0', borderLeft:'none !important',}}> 
+      <ScrollAnimation animateIn="" animateOut="" initiallyVisible={true} animateOnce={false} animatePreScroll={true} style={{position:'fixed', left:'0', top:'25vh', zIndex:'1', width:'', background:'rgba(0, 0, 0, .6)', color:'#ccc', height:'', borderRadius:'0 12px 12px 0', borderLeft:'none !important',}}> 
 <div id="resizer" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'center', 
   alignItems:'center', alignContent:'center', textAlign:'center',  padding:'1rem', textShadow: '1px 1px 0 rgba(121, 115, 115, 0.7)', whiteSpace:'nowrap', fontWeight:'bold',}}><button onClick={resizeGrid}><BiGridHorizontal style={{fontSize:'24px', margin:'0 auto'}} />Grid </button><button onClick={resizeSwipe}><MdOutlineRectangle style={{fontSize:'24px', margin:'0 auto'}} />Swipe</button>
 
@@ -82,7 +82,7 @@ const TeamPage = ({ data }) => {
 </div>
 </ScrollAnimation>
 
-        <div className="grid-container panels" style={{padding:''}}>
+        <div className="grid-container" style={{padding:''}}>
           
         <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
           {posts.map(({ node }) => (
