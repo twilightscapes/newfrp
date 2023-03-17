@@ -163,13 +163,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/static/team`,
-    //     name: `team`,
-    //   },
-    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -257,7 +250,7 @@ module.exports = {
     //     htmlTitle: `Meme Genes CMS`,
     //     htmlFavicon: `static/siteimages/manifest-icon-192.png`,
     //     includeRobots: false,
-    //     logo_url: 'https://yoursite.com/assets/logo.svg'
+    //     logo_url: 'https://urbanfetish.com/assets/logo.svg'
     //   },
     // },
 
@@ -305,8 +298,8 @@ module.exports = {
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
-    //     host: 'https://yoursite.com',
-    //     sitemap: 'https://yoursite.com/sitemap.xml',
+    //     host: 'https://urbanfetish.com',
+    //     sitemap: 'https://urbanfetish.com/sitemap.xml',
     //     resolveEnv: () => process.env.GATSBY_ENV,
     //     env: {
     //       development: {
@@ -321,10 +314,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `FRP`,
-        short_name: `FRP`,
+        name: `UrbanFetish`,
+        short_name: `UrbanFetish`,
         start_url: `/?user_mode=app`,
-        description: `FRP`,
+        description: `UrbanFetish`,
         background_color: `#111`,
         lang: `en`,
         theme_color: `#111`,

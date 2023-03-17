@@ -20,9 +20,8 @@ import { MdVolumeOff } from "react-icons/md"
 // import { MdVolumeDown } from "react-icons/md"
 import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
+import TwilightLogo from "../../static/assets/logo.svg"
 
-import { BiGridHorizontal } from "react-icons/bi"
-import { MdOutlineRectangle } from "react-icons/md"
 
 // import SearchSlider from "../components/search1"
 
@@ -181,7 +180,6 @@ query HomeQuery($id: String!) {
 
 
 
-
 const HomePage = ({ data }) => {
   // const { postcount } = useSiteMetadata()
   const { markdownRemark, posts } = data // data.markdownRemark holds your post data
@@ -229,24 +227,15 @@ const YoutubeLoop = frontmatter.youtubeloop
 
 const ClickToPlay = frontmatter.clicktoplay
 
+
+
+
+
+
+
+
+
 // const iframeUrl = "https://www.youtube-nocookie.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=" + frontmatter.youtubeautostart + "&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=" + frontmatter.youtubeloop + "&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
-
-const resizeGrid = () => {
-  const elements = document.querySelectorAll('.contentpanel');
-  elements.forEach(el => {
-    el.classList.remove('horizontal-scroll', 'panels');
-    el.classList.add('grid-container');
-  });
-}
-
-const resizeSwipe = () => {
-  const elements = document.querySelectorAll('.contentpanel');
-  elements.forEach(el => {
-    el.classList.remove('grid-container');
-    el.classList.add('horizontal-scroll', 'panels');
-
-  });
-}
 
 
 const ContentinVideo = frontmatter.contentinvideo
@@ -439,7 +428,7 @@ zindex:'1'
       {/* <div className="youtubeblockertop" style={{position:'absolute', display:'block', height:'58px', width:'100%', zIndex:'0', top:'0', right:'0', textAlign:'center', padding:'12px',
             background:'#000',
             animation:'fadeout 4s forwards', animationDelay:'6s', border:'0px solid yellow'
-          }}>yoursite.com</div> */}
+          }}>UrbanFetish.com</div> */}
   </div>
   ) : (
     ""
@@ -830,33 +819,31 @@ Click to play
 {/* <SearchSlider /> */}
 
 
-<ScrollAnimation animateIn="" animateOut="" initiallyVisible={true} animateOnce={false} animatePreScroll={true} style={{position:'fixed', left:'0', bottom:'5vh', zIndex:'1', width:'', background:'rgba(0, 0, 0, .6)', color:'#ccc', height:'', borderRadius:'0 12px 12px 0', borderLeft:'none !important',}}> 
-<div id="resizer" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'center', 
-  alignItems:'center', alignContent:'center', textAlign:'center',  padding:'1rem', textShadow: '1px 1px 0 rgba(121, 115, 115, 0.7)', whiteSpace:'nowrap', fontWeight:'bold',}}><button onClick={resizeGrid}><BiGridHorizontal style={{fontSize:'24px', margin:'0 auto'}} />Grid </button><button onClick={resizeSwipe}><MdOutlineRectangle style={{fontSize:'24px', margin:'0 auto'}} />Swipe</button>
 
 
 
-</div>
-</ScrollAnimation>
 
 {showPosts ? (
-  <section id="showPosts" style={{marginTop:'1vh'}}>
-      <StaticImage src="../../static/assets/space-truss-image.webp" alt="Default Image" style={{height:'100vh', width:'100vw', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'-1vh',border:'0px solid !important', objectFit:'contain', opacity:'.5'}} />
+  <section id="showPosts" style={{marginTop:''}}>
+
+<StaticImage src="../../static/assets/space-truss-image.webp" alt="Default Image" style={{height:'100vh', width:'100vw', maxHeight:'100vh', position:'fixed', zIndex:'0', top:'-1vh',border:'0px solid !important', objectFit:'contain', opacity:'.5'}} />
+
   <div style={{position:'relative', background:'none', maxHeight:'', overflow:'', width:'100vw'}}>
 
 
 
 
-<ScrollAnimation className="animate" animateIn="bounceInDown" animateOut="" initiallyVisible={true} animateOnce={false} animatePreScroll={false} > 
-<div className="contentpanel horizontal-scroll panels" style={{padding:''}}>
+
+
+  {/* <TwilightLogo className="bglogo darkened" /> */}
+<div className="contentpanel" style={{padding:''}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
-
                          <BlogListHome data={posts} />
-      <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
-      </div>
+      {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
+      </div> */}
 </div>
-</ScrollAnimation>
+
 </div>
 </section>
       ) : (
@@ -957,8 +944,7 @@ Click to play
 
 
 
-
-<section className="vertical" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', padding:'0 0 0 0', border:'0px solid blue',}}>
+<section className="vertical" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', padding:'0 0 0 0', border:'0px solid blue',background:'rgba(0,0,0,0.3)',}}>
 
 
 
@@ -985,7 +971,6 @@ Click to play
 
          
   
-
 
 
 <Link state={{modal: true}} to="/contact" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center' }}>{frontmatter.cta.ctaText}</Link>
@@ -1025,7 +1010,7 @@ Click to play
 
 
 
-{/* {SecondaryImage ? (
+{SecondaryImage ? (
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
@@ -1034,10 +1019,10 @@ Click to play
             />
           ) : (
             ""
-          )} */}
+          )}
 
 
-<div className="services-container"><div className="services-wrapper"><div className="services-text text1">Structural Design</div><div className="square square1"></div><div className="square square2"></div><div className="square square3"></div><div className="square square4"></div><div className="square square5"></div><div className="rectangle"></div><div className="services-text text2">Investigations</div><div className="services-text text3">Restorations</div><div className="services-text text4">Seismic Assessment</div></div></div>
+
 
 
   <div className="nameblock panel" style={{margin:'0 auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center',
@@ -1051,7 +1036,9 @@ Click to play
   textShadow:'0 2px 7px #000',
   }} >
 
-
+<span style={{marginTop:'10px', fontSize:'160%'}}>
+  {/* {companyname}  */}
+  Meme Gene</span>
 
 </div>
 </div> 
@@ -1068,47 +1055,18 @@ Click to play
   {frontmatter.tagline}
 </h2> */}
 
-{/* <div
+<div
 style={{fontSize:'clamp(1.2rem, 1.3vw, 2.2rem)'}}
   className="description"
   dangerouslySetInnerHTML={{ __html: ProfText }}
-/> */}
-
-<div className="description" style={{fontSize:'clamp(1.2rem, 1.3vw, 2.2rem)', padding:'2vh 1vw'}}>
-ESTABLISHED IN 1944 WITH 79 YEARS OF EXPERIENCE, FRP HAS A BROAD PORTFOLIO OF PROJECT TYPES ACROSS A WIDE GEOGRAPHIC REGION
+/>
 </div>
-
-</div>
-
 
 
 
 </div> 
-
-
-
-
 </article>
-
-
-{UnderlayImage ? (
-              <GatsbyImage
-                image={UnderlayImage}
-                alt={frontmatter.title + " - image"}
-                className="mcboaty11"
-                style={{height:'100%', width:'100%', maxWidth:'100vw', maxHeight:'', overflow:'', position:'asbsolute', zIndex:'0', margin:'10vh auto',
-               objectFit:'cover', border:'0px solid red !important', background:'transparent',}}
-              />
-              
-            ) : (
-              ""
-            )}
-
 </section>
-
-
-
-
 </ScrollAnimation>
 ) : (
   ""
@@ -1204,7 +1162,7 @@ ESTABLISHED IN 1944 WITH 79 YEARS OF EXPERIENCE, FRP HAS A BROAD PORTFOLIO OF PR
 
  {/* <GoogleMap /> */}
 <div id="bottom" className="usability" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
-<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://frpinc.com" target="_blank" rel="noreferrer">FRP</a></div>
+<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://frpinc.com" target="_blank" rel="noreferrer">frpinc.com</a></div>
 </div>
 <br/><br/><br/>
 

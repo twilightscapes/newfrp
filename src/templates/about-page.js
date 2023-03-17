@@ -54,7 +54,7 @@ Fink Roberts & Petrie, Inc. has long been known as a premier structural engineer
 <section id="cd-timeline" className="cd-container">
 
 
-<ScrollAnimation className="animate" animateIn="bounceInLeft" animateOut="" initiallyVisible={false} animateOnce={true} animatePreScroll={false} > 
+<ScrollAnimation className="animate" animateIn="bounceInLeft" animateOut="" initiallyVisible={true} animateOnce={true} animatePreScroll={true} > 
 		<div className="cd-timeline-block">
 			<div className="cd-timeline-img cd-picture">
 			</div>

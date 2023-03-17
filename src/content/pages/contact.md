@@ -6,4 +6,3 @@ scrollable: true
 ---
 
 
-Thanks for contacting us!

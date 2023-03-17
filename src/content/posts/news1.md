@@ -5,11 +5,11 @@ slug: /news1
 date: 2023-02-11 03:00
 description: Exclusive! Trailer of YellowStone season 5 Part Two is here! There's more drama and action than any season before.
 youtuber: https://youtu.be/oqpp8L4J4ek
-youtuber2: 
+youtuber2: ""
 youtubeshoworiginal: false
-youtubersuggestion1: 
-youtubersuggestion2: 
-youtubersuggestion3: 
+youtubersuggestion1: ""
+youtubersuggestion2: ""
+youtubersuggestion3: ""
 youtubestart: "0"
 youtubeend: "97"
 youtubemute: false
@@ -29,7 +29,7 @@ comments: false
 shareable: false
 underlayImage: /assets/transparent.png
 featuredImage: /assets/Slider1.webp
-svgImage: 
+svgImage: ""
 scrollable: true
 nftdrop: "2023-02-11T10:00:00"
 contentinvideo: false

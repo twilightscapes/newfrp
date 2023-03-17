@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from 'react';
 import Seo from "./seo"
 import { Link } from 'gatsby'
 // import { ModalRoutingContext } from '@decantyme/gatsby-plugin-modal-routing'
@@ -19,6 +19,12 @@ import SearchIcon from "../../static/assets/search"
 // import SearchForm from "./searchbox"
 import useSiteMetadata from "../hooks/SiteMetadata"
 
+// import GoBack from "../components/goBack"
+
+import { BiGridHorizontal } from "react-icons/bi"
+import { MdOutlineRectangle } from "react-icons/md"
+
+
 import Fullscreen from "../components/FullScreen"
 // import ss from "../../static/assets/pagebg.webp"
 // import { Link } from "gatsby-plugin-anchor-links"
@@ -29,7 +35,96 @@ import SignUp from "../components/newssign"
 // import { navigate } from "gatsby";
 const Layout = ({ children }) => {
 
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset;
   
+    window.onscroll = function() {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos && prevScrollpos - currentScrollPos > 75) {
+        document.querySelector('.header').style.transform = 'translateY(0)';
+        // document.querySelector('#menuicon').style.transform = 'translateX(0)';
+        // document.body.classList.remove('scroll');
+        // document.body.classList.add('scroll');
+      } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
+        document.querySelector('.header').style.transform = 'translateY(-100%)';
+        // document.querySelector('#menuicon').style.transform = 'translateX(110%)';
+        document.body.classList.add('scroll');
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }, []);
+
+
+  
+
+
+
+
+
+
+    const [archiveView, setArchiveView] = useState('');
+
+    // useEffect(() => {
+    //   sessionStorage.setItem("scrollPos", window.pageYOffset)
+    // }, [])
+  
+    useEffect(() => {
+      if (window.history.scrollRestoration) {
+        const scrollPos = sessionStorage.getItem("scrollPos")
+        window.history.scrollRestoration = "manual"
+        window.scrollTo(0, scrollPos)
+        window.history.scrollRestoration = "auto"
+      }
+    }, [])
+
+    
+    useEffect(() => {
+      // Retrieve the selected option from local storage or default to 'swipe'
+      const storedArchiveView = localStorage.getItem('archiveView');
+      setArchiveView(storedArchiveView || 'swipe');
+    }, []);
+  
+    useEffect(() => {
+      // Apply the selected option on page load
+      applyArchiveView();
+    }, [archiveView]);
+  
+    const applyArchiveView = () => {
+      const elements = document.querySelectorAll('.contentpanel');
+      elements.forEach((el) => {
+        if (archiveView === 'grid') {
+          el.classList.remove('horizontal-scroll', 'panels');
+          el.classList.add('grid-container');
+          document.body.classList.add('scroll');
+        } else if (archiveView === 'swipe') {
+          el.classList.remove('grid-container');
+          el.classList.add('horizontal-scroll', 'panels');
+          document.body.classList.remove('scroll');
+          // document.querySelector('#menuicon').style.transform = 'translateY(110%)';
+        }
+      });
+      window.scrollTo(0, 0);
+      localStorage.setItem('archiveView', archiveView);
+    };
+  
+    const toggleArchiveView = () => {
+      const newArchiveView = archiveView === 'grid' ? 'swipe' : 'grid';
+      setArchiveView(newArchiveView);
+      applyArchiveView();
+    };
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const { companyname } = useSiteMetadata()
@@ -69,7 +164,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
   return (
-    <div style={{display:''}}> 
+
 <>
 
 
@@ -84,6 +179,8 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
     <link id="yyy" rel="stylesheet"
           href={fontUrl} crossorigin="anonymous" />
   )} 
+
+  
 </Helmet>
 
 <Seo />
@@ -109,42 +206,52 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 </ModalRoutingContext.Consumer> */}
 
 
+  
+
+
 
 
 
 {showNav ? (
+<div id="menu" className="menu print panel1 header" style={{position:'fixed', width:'100vw', top:'0', zIndex:'10', maxHeight:'', overFlow:'', boxShadow:'0 0 2px rgba(0,0,0,.7)', padding:'0 2%', alignItems:'start', borderRadius:'0', display:'flex', justifyContent:'space-around', gap:'10px', color:'#fff',  borderBottom:'1px solid #222', background:'#222'  }}>
 
-<ul sx={navStyle} id="menu" className="menu print panel" style={{}}>
-      
+
 {prefersReducedMotion ? (
-            <li className="nomo" style={{position:'relative',}}>
-            <button className="">
+    
+            <button className="cornerlogo" style={{position:'relative', top:'1vh', left:'4%', border:'0px solid white'}} aria-label="Return to Home">
             {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} style={{minWidth:'200px', border:'none'}} width="150" height="70" />
+      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'', border:'none'}} width="120" height="60" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
             </button>
-          </li>
+          
           ) : (
-            <li className="momo" style={{position:'relative',}}>
-                        <AnchorLink to="/#top" name="homereturn" style={{position:'', display:'block', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
+          
+                        <AnchorLink to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'',minWidth:'200px', border:'none', padding:'1.2vh 2vw'}} width="150" height="70" />
+      <img className="cornerlogo" style={{position:'relative', top:'1vh', left:'4%', border:'0px solid white', padding:'0 1%'}} src={iconimage} alt={companyname} width="120" height="60" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
             </AnchorLink>
-            {/* <button className="" onClick={() => { navigate(-1) }}>
-            {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} style={{maxHeight:'60px', border:'none'}} width="100px" height="70px" />
-                ) : (
-                  <div style={{fontWeight:'bold',}}>{companyname}</div>
-                )}
-            </button> */}
-            {/* <a onClick={() => window.history.back()}>Go back</a> */}
-                        </li>
+                        
           )}
+
+
+          
+
+
+
+
+
+<ul className="topmenu" sx={navStyle} style={{ fontSize:'clamp(.6rem, 1.6vw, 1.8rem)',  textAlign:'center',maxHeight:'', display:'flex', justifyContent:'space-between', gap:'4vw',  alignItems:'center', margin:'0 auto 0 auto', padding:'1.2vh 2% 0 2%', border:'0px solid white', textTransform:'uppercase'}}>
+      
+
+
+
+
+
       
       
 {/* <li>
@@ -221,6 +328,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 )}
 
 
+
+
+
 <li style={{position:'relative',}}>
 
       <AnchorLink aria-label="News" className="navbar-item" to="/" style={{paddingRight:'',}}>
@@ -238,23 +348,29 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-{showInfo ? (
+{/* {showInfo ? (
 <li style={{position:'relative',}}>
-      {/* {prefersReducedMotion ? (
+      {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
    ) : (
       <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
       {menu1}</AnchorLink>         
-    )} */}
+    )}
 <AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
       About</AnchorLink>   
 
 </li>
       ) : (
   ""
-)}
+)} */}
 
 
+<li style={{position:'relative',}}>
+
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
+      About</AnchorLink>         
+
+</li>
 
 
 
@@ -315,6 +431,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   ""
 )}
 
+{/* <li>
+<Link aria-label="Contact" className="navbar-item" to="/contact" style={{paddingRight:'',}}>Submissions</Link> 
+</li> */}
 
 
 {/* <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
@@ -322,41 +441,79 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   <Theme  style={{padding:'0'}} />
   <SearchIcon />
   </li> */}
+</ul>
 
+<div id="missioncontrol" className="sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', padding:'.5% .5% 0 0'}}>
 
-<li className="carto crypto nomo search" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}>
-   <Link aria-label="Search" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'0px'}}>
-    <SearchIcon style={{width:'3vh', height:'3vw'}} />
+<div>
+   <Link aria-label="Search UrbanFetish" to="/search/" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
+    <SearchIcon style={{}} />
+    <span className="themetext">search</span>
    </Link>
-        </li>
+        </div>
 
-<li style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0px 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}></li>
 
-  <li className="carto crypto nomo theme" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'', alignItems:'center', }}>
-      <Theme  style={{color:''}} />
 
-        </li>
+  <div>
+      <Theme  style={{}} />
+        </div>
+
+  
+  <div>
+
+  <button
+  aria-label="Grid/Swipe View"
+  onClick={toggleArchiveView}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "0px",
+    textAlign: "center",
+  }}
+>
+  {archiveView === "grid" ? (
+    <MdOutlineRectangle style={{ width: "30px", height: "30px" }} />
+  ) : (
+    <BiGridHorizontal style={{ width: "30px", height: "30px" }} />
+  )}
+  <span className="themetext">
+    {archiveView === "grid" ? "swipe" : "scroll"}
+  </span>
+</button>
+
+
+
+  {/* <button onClick={toggleArchiveView}>Toggle Archive View</button> */}
+    {/* <button aria-label="Dark/Light Mode" onClick={toggleArchiveView} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
+      {archiveView === 'grid' ? <MdOutlineRectangle  style={{width:'3vh', height:'3vw'}} /> : <BiGridHorizontal  style={{width:'4vh', height:'3vw'}} /> }
+      <span className="themetext">{archiveView === 'grid' ? 'swipe' : ' scroll '}</span>
+    </button> */}
+</div>
 
  
 
-    <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'center', gap:'', verticalAlign:'center', padding:'0 0 0 0' , background:'rgba(0,0,0,0)', color:'' }}>
-   <Link aria-label="Enter Full Screen Mode" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'center', alignItems:'center', marginTop:'', cursor:'pointer'}}>
-   <Fullscreen />
-   </Link>
-        </li>
+    {/* <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'10px', textAlign:'center'}}>
+   
+   <Fullscreen style={{width:'', height:''}} />
+   <span className="themetext">fullscreen</span>
 
+        </div> */}
+</div>
       
 
         
            
       
-            </ul>
 
+            </div>
 
 ) : (
   ""
 )}
 
+{/* <div id="gobacker" style={{position:'absolute', top:'50px', right:'3vw', zIndex:'2'}}><GoBack /></div> */}
 
 
 <header id="top" name="pagetop" style={{}} >
@@ -502,12 +659,12 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
       
 
-   <Link aria-label="Search" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
+   <Link aria-label="Search UrbanFetish" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
     <SearchIcon />
    </Link>
     
 
-<Theme  style={{color:'red !important'}} />
+<Theme  style={{}} />
 
 
    <Link aria-label="Enter Full Screen Mode" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
@@ -574,14 +731,17 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 {children}
 </div>
       
-{/* <img className="backimage" src={image} alt="" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" /> */}
+{/* <img className="backimage" src={image} alt="Default Background" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" /> */}
+
+
+
       
       {/* <Consent /> */}
      {/* <Install /> */}
       {/* <Footer /> */}
       
       </>
-    </div>
+
     
     );
   };

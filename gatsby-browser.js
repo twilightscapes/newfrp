@@ -1,10 +1,9 @@
 // import * as React from "react"
 // import { StoreProvider } from "./src/context/store-context"
 
+
 import "fontsource-spartan/600-normal.css"
 import "fontsource-spartan/500-normal.css"
-
-
 // export const wrapRootElement = ({ element }) => (
 
   

@@ -1,12 +1,12 @@
 {
-  "name": "@twilightscapes/gatsby-starter-myresume",
-  "description": "A starter to launch your blazing fast website web app and multimedia blog, Built with Gatsby and Netlify CMS. Made with ❤ by Todd Lambert",
+  "name": "@memegene/gatsby-starter",
+  "description": "A starter",
   "version": "2.0.0",
-  "author": "Todd Lambert <toddlambert@gmail.com>",
+  "author": "Anonymous <Anonymous@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twilightscapes/gatsby-starter-MyResume.git"
+    "url": "https://github.com/.git"
   },
   "bugs": {
     "url": "https://github.com/issues"
@@ -30,7 +30,6 @@
     "gatsby": "^5.7.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
-    "fontsource-spartan": "^3.0.3",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-gtag": "^5.4.0",
     "gatsby-plugin-image": "^3.7.0",
@@ -38,6 +37,7 @@
     "gatsby-plugin-netlify-cms-paths": "^1.3.0",
     "gatsby-plugin-offline": "^6.4.0",
     "gatsby-plugin-purgecss": "^6.2.1",
+    "fontsource-spartan": "^3.0.3",
     "gatsby-plugin-react-helmet": "^6.4.0",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sass": "^6.4.0",
@@ -64,7 +64,9 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
+    "react-image-zoom": "^1.3.1",
     "react-images": "^1.2.0-beta.7",
+    "react-medium-image-zoom": "^5.1.3",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.7.0",
     "react-share-social": "^0.1.55",

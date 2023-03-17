@@ -17,7 +17,7 @@ const Completionist = () => <span></span>
 // const renderer = ({ hours, minutes, seconds, completed }) => {
 //   if (completed) {
 
-//     return <a href="https://.com/"><Completionist /></a>;
+//     return <a href="https://urbanfetish.com/"><Completionist /></a>;
 //   } else {
 
 //     return (
@@ -50,18 +50,10 @@ const PostCard = ({ data }) => (
 
 
 
-  <article
+  <div
     className="post-card1"
-    style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0 0' }}
+    style={{}}
   >
-
-
-
-
-
-
-
-
 
     {data.frontmatter.featuredImage ? (
       <Link to={data.frontmatter.slug}>
@@ -72,7 +64,7 @@ const PostCard = ({ data }) => (
           placeholder="blurred"
               // loading="eager"
     
-              style={{position:'relative', zIndex:'1', maxHeight:'65vh', margin:'0 auto'}}
+              style={{position:'relative', zIndex:'1', maxHeight:'', margin:'0 auto'}}
         />
       </Link>
       
@@ -84,20 +76,26 @@ const PostCard = ({ data }) => (
 
 
 
-
+<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
 
 {data.frontmatter.youtuber ? (
 <Link to={data.frontmatter.slug} style={{}}>
-  <div className="spotlight" style={{maxHeight:''}}>
-<div className="posticons" style={{}}>
-<div style={{display:'flex', justifyContent:'space-around', gap:'2vw', color:'fff',}}>
+
+  <div className="spotlight" style={{marginLeft:'10%', marginTop:'-24%', margin:'-24% 10% 0 10%'}}>
+
+<div className="posticons" style={{flexDirection:'column', margin:'0 auto'}}>
+
+<div style={{display:'flex', justifyContent:'space-around', gap:'2vw', color:'fff', }}>
 <FaImage className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
     <ImPlay className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
     <AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
 </div>
+
 Play Multimedia
 </div>
+
 </div>
+
 </Link>
 ) : (
   ""
@@ -105,7 +103,7 @@ Play Multimedia
 
 
 
-<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto'}}>
+
 
 
 
@@ -135,12 +133,12 @@ date={Date.now() + 6000} className="countdown"> */}
           )}
 
 
-<div className="panel" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'10px auto', maxWidth:'80vw', gap:'.4vw', height:'100%', textAlign:'left', fontSize:'clamp(1rem, 1vw, 1rem)',  background:'rgba(0, 0, 0, 0.7)', padding:'1vh 2vw', borderRadius:'8px', color:'#fff' }}>
-
-<h2 className="title" style={{fontSize:'clamp(1rem, 2vw, 3rem)', }}>
-  <Link 
+<div className="panel" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'10px auto', maxWidth:'80vw', gap:'.4vw', height:'', textAlign:'left', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)',  background:'rgba(0, 0, 0, 0.7)', borderRadius:'', color:'#aaa' }}>
+<Link 
     to={data.frontmatter.slug}
   >
+<h2 className="title1" style={{ }}>
+  
     {data.frontmatter.title}
      {/* - <Countdown date={Date.now() + 60000} renderer={renderer} precision={0} intervalDelay={0} zeroPadTime={0} />  */}
     {/* <Countdown
@@ -152,9 +150,9 @@ date={Date.now() + 60000} className="countdown">
     renderer={props => ({ hours, minutes, seconds })}
 <Completionist />
 </Countdown> */}
-
-  </Link>
 </h2>
+  </Link>
+
 
 
 {/* <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
@@ -167,7 +165,7 @@ date={Date.now() + 60000} className="countdown">
 
 </div>
 
-  </article>
+  </div>
 
 )
 
