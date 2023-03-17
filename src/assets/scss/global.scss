@@ -442,7 +442,7 @@ to{opacity:0;z-index:-3}
   #menu.header {background:red !important;}
   // background:var(--theme-ui-colors-textShadow);
   color:var(--theme-ui-colors-text);margin-top:0!important;overflow:visible!important;text-shadow:var(--theme-ui-colors-textShadow)}
-#menu li{color:#eee;font-size:clamp(1rem,1.4vw,2.2rem);text-shadow:2px 2px 0 #000}
+#menu li{color:#eee;font-size:clamp(.9rem,1.4vw,2.2rem);text-shadow:2px 2px 0 #000}
 #menu li .fullscreenButt{display:none;fill:var(--theme-ui-colors-text)!important;filter:dropShadow(2px 2px 2px #000)!important;}
 #menu li svg{color:var(--theme-ui-colors-text)!important;outline:#ff0;stroke:var(--theme-ui-colors-text)!important;}
 
@@ -551,11 +551,12 @@ position:absolute !important; top:72vh ;
 #menu {flex-direction: column !important; min-height: 70px;}
 
 #missioncontrol {position:absolute; right:4vw; top:10px; gap:5vw !important;}
-.cornerlogo{ left:18%; top:2px; max-height: 100px !important;}
+.cornerlogo{ left:18%; top:2px; width:210px; height:60px}
 
-.spacer{display:block; height:120px !important;}
+.spacer{display:block; height:130px !important;}
 
-.topmenu li {margin-top:7vh !important; background-color:rgba(0, 0, 0, 0.4);
+.topmenu {gap:1vw !important; padding:0 !important;}
+.topmenu li {margin-top:4vh !important; background-color:rgba(0, 0, 0, 0.4);
   padding:0 2vw; border-radius: 10px 12px 0 0;}
 
 .horizontal-scroll .post-content{

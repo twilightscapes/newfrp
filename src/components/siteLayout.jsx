@@ -230,7 +230,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
           
                         <AnchorLink to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="cornerlogo" style={{position:'relative', top:'1vh', left:'4%', border:'0px solid white', padding:'0 1%'}} src={iconimage} alt={companyname} width="120" height="60" />
+      <img className="cornerlogo" style={{position:'relative', top:'1vh', left:'4%', border:'0px solid white', padding:'0 1%'}} src={iconimage} alt={companyname} width="175" height="50" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
@@ -245,7 +245,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-<ul className="topmenu" sx={navStyle} style={{ fontSize:'clamp(.6rem, 1.6vw, 1.8rem)',  textAlign:'center',maxHeight:'', display:'flex', justifyContent:'space-between', gap:'4vw',  alignItems:'center', margin:'0 auto 0 auto', padding:'1.2vh 2% 0 2%', border:'0px solid white', textTransform:'uppercase'}}>
+<ul className="topmenu" sx={navStyle} style={{ fontSize:'clamp(.6rem, 1.6vw, 1.8rem)',  textAlign:'center',maxHeight:'', display:'flex', justifyContent:'space-between', gap:'4vw',  alignItems:'center', margin:'0 auto 0 auto', padding:'1.5vh 2% 0 2%', border:'0px solid white', textTransform:'uppercase'}}>
       
 
 
