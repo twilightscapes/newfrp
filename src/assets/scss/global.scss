@@ -556,8 +556,9 @@ position:absolute !important; top:72vh ;
 .spacer{display:block; height:130px !important;}
 
 .topmenu {gap:1vw !important; padding:0 !important;}
-.topmenu li {margin-top:4vh !important; background-color:rgba(0, 0, 0, 0.4);
-  padding:0 2vw; border-radius: 10px 12px 0 0;}
+.topmenu li {margin-top:4vh !important;
+  // background-color:rgba(0, 0, 0, 0.4);
+  padding:0 1vw; border-radius: 10px 12px 0 0;}
 
 .horizontal-scroll .post-content{
   position:absolute !important; top:35vh !important;
